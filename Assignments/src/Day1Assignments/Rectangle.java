@@ -14,7 +14,7 @@ public class Rectangle {
 	 * 
 	 */
 	public Rectangle() {
-		length=breadth=0;
+		length=breadth=1;
 	}
 	public Rectangle(float length, float breadth) {
 		this.length = length;
@@ -25,13 +25,23 @@ public class Rectangle {
 	 * @param breadth the breadth to set
 	 */
 	public void setBreadth(float breadth) {
-		this.breadth = breadth;
+		if(breadth>0.0 && breadth<20.0) {
+			this.breadth = breadth;
+		}
+		else {
+			System.out.println("Side lengths must be between 0.0 and 20.0.");
+		}
 	}	
 	/**
 	 * @param length the length to set
 	 */
 	public void setLength(float length) {
-		this.length = length;
+		if(length>0.0 && length<20.0) {
+			this.length = length;
+		}
+		else {
+			System.out.println("Side lengths must be between 0.0 and 20.0.");
+		}
 	}
 	
 	/**
@@ -46,5 +56,9 @@ public class Rectangle {
 	
 	public float computeArea() {
 		return length*breadth;
+	}
+	
+	public float computePerimeter() {
+		return 2*length+2*breadth;
 	}
 }

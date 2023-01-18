@@ -25,6 +25,8 @@ public class TestRectangle {
 		
 		Rectangle r1 = new Rectangle(length,breadth);
 		System.out.println("The area of the rectangle is " + r1.computeArea());
+		System.out.println("The perimeter of the rectangle is " + r1.computePerimeter());
+		
 		
 	}
 
