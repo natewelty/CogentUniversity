@@ -18,29 +18,30 @@ public class CustomerController {
 			cs.save();
 			break;
 		case 2:
-			cs.fetch();
+			cs.fetch(); 
 			break;
 		case 3:
 			System.out.println("Enter the customer ID.");
 			cId= sc.next();
-			cs.modify(cId);
+			cs.modify(cId); 
 			break;
 		case 4:
 			System.out.println("Enter the customer ID.");
 			cId = sc.next();
-			cs.delete(cId);
+			cs.delete(cId); 
 			break;
 		case 5:
 			System.out.println("Enter the customer ID.");
 			cId = sc.next();
-			cs.fetchById(cId);
+			cs.fetchById(cId); 
 			break;
 		case 6:
-			cs.findYoungest();
+			cs.findYoungest(); 
 			break;
 		case 7:
 			break;
 			
 		}
+		sc.close();
 	}
 }

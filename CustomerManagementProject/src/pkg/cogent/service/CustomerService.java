@@ -4,7 +4,7 @@ import pkg.cogent.dao.CustomerDAOImpl;
 public class CustomerService {
 	CustomerDAOImpl dao;
 	public CustomerService(){
-		CustomerDAOImpl dao = new CustomerDAOImpl();
+		dao = new CustomerDAOImpl();
 	}
 	public void save() {
 		dao.create();

@@ -8,7 +8,7 @@ public class Main {
 		int choice=0;
 		Scanner sc = new Scanner(System.in);
 		CustomerController cc = new CustomerController();
-		System.out.println("Welcome to the Customer Management Application");
+		System.out.println("Welcome to the Cus1tomer Management Application");
 		do {
 			System.out.println("1-Add record.");
 			System.out.println("2-Read records.");
