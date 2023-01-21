@@ -8,7 +8,7 @@ public class SportCar extends Car {
 	
 	@Override
 	public void display() {
-		super();
+		//super();
 		System.out.println("The air ballon type is " + airBallonType);
 		
 	}

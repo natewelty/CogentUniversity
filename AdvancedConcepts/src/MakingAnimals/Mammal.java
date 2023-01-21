@@ -12,4 +12,10 @@ public interface Mammal {
 	public void eat();
 	public void move();
 	public void sleep();
+	public default void breathe() {
+		System.out.println("animals breathe");
+	}
+	public default void sneeze() {
+		System.out.println("achoo");
+	}
 }

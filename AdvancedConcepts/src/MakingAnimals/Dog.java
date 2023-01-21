@@ -12,4 +12,9 @@ public class Dog extends Animal{
 	public void bark() {
 		System.out.println("woof woof");
 	}
+	@Override
+	public void sneeze() {
+		System.out.println("Extra loud dog sneeze");
+		//new super().sneeze();
+	}
 }

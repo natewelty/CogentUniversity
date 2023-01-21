@@ -17,10 +17,14 @@ public class main {
 		Animal animal = new Cat();
 		Cat cat = (Cat) animal;
 		cat.meow();
-		
-		Animal stanimal = new Cat();
-		Dog dog = (Dog) stanimal;
+		cat.breathe();
+		cat.sneeze();
+		//Animal stanimal = new Cat();
+		//Dog dog = (Dog) stanimal;
+		Dog dog = new Dog();
 		dog.bark();
+		dog.breathe();
+		dog.sneeze();
 		
 	}
 
