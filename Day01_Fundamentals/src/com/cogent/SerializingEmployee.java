@@ -5,12 +5,13 @@ import java.io.*;
 public class SerializingEmployee {
 
 	public static void main(String[] args) {
+		File file = new File("C:/Users/nate/Documents/emp.ser");
 		FileOutputStream fos;
 		ObjectOutputStream oos;
 		ObjectInputStream ois;
 		FileInputStream fis;
 		try {
-			File file = new File("C:/Users/nate/Documents/emp.ser");
+			
 
 			fos = new FileOutputStream(file);
 			oos = new ObjectOutputStream(fos);
