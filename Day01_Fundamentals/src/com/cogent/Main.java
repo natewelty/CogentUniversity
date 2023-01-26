@@ -1,7 +1,10 @@
 package com.cogent;
 
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -36,9 +39,30 @@ public class Main {
 		StringBuffer sb = new StringBuffer(input);
 		reversal1.accept(sb);
 		System.out.println(reversal2.apply(input));*/
-		MyClass mc = new MyClass();
+		
+		
+		/*MyClass mc = new MyClass();  //How to Method Reference
 		MyInterface f1 = mc::alternateMethod;
-		f1.myMethod(12);
+		f1.myMethod(12); */
+		
+		List<Book> books = new ArrayList<>();
+		books.add(new Book("Book of Things", "John", 12, 12.25));
+		books.add(new Book("Book of Things 2", "Jacob", 121, 12.25));
+		books.add(new Book("Book of Things 4", "Jingleheimer", 57, 12.25));
+		books.add(new Book("Book of That", "Schmidt", 125, 12.25));
+		books.add(new Book("Book of This", "Schmidt", 1, 12.25));
+		
+		for(Book book:books) {
+			System.out.println(book.toString());
+		}
+		
+		Collections.sort(books);
+		
+		for(Book book:books) {
+			System.out.println(book.toString());
+		}
+		
+		
 	}
 }
 
