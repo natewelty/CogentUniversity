@@ -16,8 +16,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 		customers = new Customer[size];
 		for(int i = 0; i<customers.length; i++) {
 			System.out.println("Please enter customer ID.");
-			String cId = sc.next();
-			if(cId==null) {
+			int cId = sc.nextInt();
+			if(cId==0) {
 				throw new MandatoryFieldException("Customer ID is a mandatory field.");
 			}
 			System.out.println("Please enter customer name.");
