@@ -2,14 +2,15 @@ package pkg.cogent.model;
 
 public class Customer {
 	//CId CName CEmail and DoB bean class
-	private String CId, CEmail, CName, CDoB;
+	private int CId;
+	private String CEmail, CName, CDoB;
 
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Customer(String cId, String cEmail, String cName, String cDoB) {
+	public Customer(int cId, String cEmail, String cName, String cDoB) {
 		super();
 		CId = cId;
 		CEmail = cEmail;
@@ -17,11 +18,11 @@ public class Customer {
 		CDoB = cDoB;
 	}
 
-	public String getCId() {
+	public int getCId() {
 		return CId;
 	}
 
-	public void setCId(String cId) {
+	public void setCId(int cId) {
 		CId = cId;
 	}
 
