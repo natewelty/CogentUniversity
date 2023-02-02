@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AdvancedConcepts/src"/>
+	<classpathentry kind="src" path="Assignments/day3Assignments"/>
+	<classpathentry kind="src" path="Assignments/src"/>
+	<classpathentry kind="src" path="cogent_university/src/main/java"/>
+	<classpathentry kind="src" path="CustomerManagementProject/src"/>
+	<classpathentry kind="src" path="Day01_Fundamentals/src"/>
+	<classpathentry kind="src" path="ProductManagementProject/src"/>
+	<classpathentry excluding="org/cogent/" kind="src" path="SpringTest/src/main/java"/>
+	<classpathentry kind="src" path="SpringTest/src/main/java/org/cogent"/>
+	<classpathentry kind="output" path="AdvancedConcepts/bin"/>
+</classpath>
