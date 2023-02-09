@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: nate
+Build-Jdk: 17.0.5
+Implementation-Title: springboot-jpa-hibernate-manytomany-mapping
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.example
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/springboot-jpa-hibernate-manytomany-mapping
+Created-By: Maven Integration for Eclipse
+

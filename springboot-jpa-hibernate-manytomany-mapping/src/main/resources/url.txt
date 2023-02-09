@@ -1,0 +1,24 @@
+GET
+----------------------
+http://localhost:8080/books
+------------------------------------
+POST:
+-------------------------
+http://localhost:8080/book
+--------------------------------
+{
+"title":"Javas",
+"isbn":"233fjjf",
+"publisher":"shiva",
+"authors":[
+{
+	"firstName":"Gyanendra",
+	"lastName":"Singh"
+},
+{
+	"firstName":"Amit",
+	"lastName":"Kumar"
+}
+]
+}
+------------------------------------
