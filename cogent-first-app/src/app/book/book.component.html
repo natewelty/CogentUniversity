@@ -1,0 +1,18 @@
+    <h1>Books!</h1>
+  <table border="2px" *ngIf="showBooks">
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Pages</td>
+            <td>Price</td>
+        </tr>
+          <tr *ngFor="let b of books">
+              <td>{{b.id}}</td>
+              <td>{{b.title|uppercase}}</td>
+              <td>{{b.pages}}</td>
+              <td>{{b.price|currency}}</td>
+          </tr>
+  </table>
+  <br>
+  <button (click)="toggleBooks()">Toggle</button>
+  

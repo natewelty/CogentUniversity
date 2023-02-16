@@ -1,0 +1,8 @@
+h1{
+    text-align:center;
+    color:#008000;
+    border: 2px solid rebeccapurple;
+    background: linear-gradient(white,lightblue,white);
+    width: 250px;
+    animation: .5s cubic-bezier(0.1, 0.7, 1, 0.1) 1s infinite alternate slidein;
+}

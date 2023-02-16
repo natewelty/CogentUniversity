@@ -1,0 +1,8 @@
+h1{
+    color:red;
+    text-align:center;
+    
+    border: 2px solid rebeccapurple;
+    background: linear-gradient(white,orangered,white);
+    width: 250px;
+}
