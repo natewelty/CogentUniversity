@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -13,15 +13,22 @@ import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import { BookComponent } from './book/book.component';
+import { ProductService } from './ProductService';
+import { LoginComponent } from './login/login.component';
+import { PracticeFormComponent } from './practice-form/practice-form.component';
+import { PracticetableComponent } from './practicetable/practicetable.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,ServerComponent, TestComponentComponent, WarningAlertComponent, SuccessAlertComponent, ProductComponent, GameControlComponent, OddComponent, EvenComponent, BookComponent
+    AppComponent,ServerComponent, TestComponentComponent, WarningAlertComponent, SuccessAlertComponent, 
+    ProductComponent, GameControlComponent, OddComponent, EvenComponent, BookComponent, LoginComponent, PracticeFormComponent,PracticetableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

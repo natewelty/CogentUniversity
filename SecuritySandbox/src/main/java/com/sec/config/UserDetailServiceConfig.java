@@ -2,6 +2,7 @@ package com.sec.config;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,9 +22,10 @@ import com.sec.entity.CustomUser;
 @Configuration
 public class UserDetailServiceConfig {
 	@Bean
-	public UserDetailsService userDetailsService(BCryptPasswordEncoder bCryptPasswordEncoder, DataSource dataSource) {
+	public UserDetailsService userDetailsService(BCryptPasswordEncoder bCryptPasswordEncoder, DataSource dataSource, AuthenticationManager authenticationManager) {
 		JdbcUserDetailsManager manager = new JdbcUserDetailsManager(dataSource);
-	    manager.createUser(CustomUser.withUsername("user")
+	    
+		manager.createUser(CustomUser.withUsername("user")
 	      .password(bCryptPasswordEncoder.encode("userPass"))
 	      .roles("USER")
 	      .build());
@@ -31,6 +33,7 @@ public class UserDetailServiceConfig {
 	      .password(bCryptPasswordEncoder.encode("adminPass"))
 	      .roles("USER", "ADMIN")
 	      .build());
+	    manager.setAuthenticationManager(authenticationManager);
 	    return manager;
 	}
 	

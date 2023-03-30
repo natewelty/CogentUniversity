@@ -2,6 +2,10 @@ package com.cogent.ProductDB.entity;
 
 
 
+import java.sql.Date;
+import java.time.Instant;
+import java.time.LocalDateTime;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
@@ -25,4 +29,12 @@ public class Product {
 	String productName;
 	@JsonProperty
 	int productPrice;
+	@JsonProperty
+	String expiration;
+	
+	public Product(String name, int price, String exp) {
+		this.productName=name;
+		this.productPrice=price;
+		this.expiration=exp;
+	}
 }

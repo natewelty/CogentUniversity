@@ -1,6 +1,12 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.time.Instant;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
 
 public class TestingJDBC {
 	public static void main(String[] args) {
@@ -22,6 +28,20 @@ public class TestingJDBC {
 			con = DriverManager.getConnection(url,username,password);
 			if (con != null) {
 				System.out.println("Connection established.");
+				PreparedStatement creator = con.prepareStatement("INSERT INTO dates(now, notnow) values(?,?);");
+				OffsetDateTime timeNow = OffsetDateTime.now();
+				OffsetDateTime timeThen = timeNow.plusHours(3);
+				creator.setObject(1, timeNow);
+				creator.setObject(2, timeThen);
+				System.out.println(timeNow);
+				System.out.println(timeThen);
+				PreparedStatement readerAll = con.prepareStatement("select * from dates;");
+				creator.execute();
+				ResultSet rs = readerAll.executeQuery();
+				while(rs.next()) {
+					System.out.println( OffsetDateTime.ofInstant(Instant.ofEpochMilli(rs.getTimestamp(1).getTime()),ZoneId.of("UTC")));
+					System.out.println(OffsetDateTime.ofInstant(Instant.ofEpochMilli(rs.getTimestamp(2).getTime()),ZoneId.of("UTC")));
+				}
 			}
 			
 			//Step 3 Do whatever you want with the database

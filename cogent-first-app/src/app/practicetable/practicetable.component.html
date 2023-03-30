@@ -1,0 +1,12 @@
+<div class = "table">
+    <table *ngFor="let product of tableData; index as i">
+        <tr *ngIf="product.show">
+            <td>{{product.itemNo}}</td>
+            <td>{{product.itemName}}</td>
+            <td>{{product.itemPrice | currency}}</td>
+            <td><img [src] = "product.itemImageSrc" alt="../../assets/src_imgs/R.png"/></td>
+            <td><button (click)="onClick(i)">Delete</button></td>
+        </tr>
+    </table>
+</div>
+

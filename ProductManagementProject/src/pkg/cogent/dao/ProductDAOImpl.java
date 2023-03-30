@@ -79,7 +79,7 @@ public class ProductDAOImpl implements ProductDAO {
 			ResultSet rs = readerAll.executeQuery();
 			while (rs.next()) {
 				Product product = new Product(rs.getInt("ID"), rs.getString("name"), rs.getString("cat"),
-						rs.getDate("manufacture_date"), rs.getDate("exp_date"), rs.getDouble("price"));
+						rs.getDate("manufacture_date").toInstant(), rs.getDate("exp_date").toInstant(), rs.getDouble("price"));
 				System.out.println(product);
 			}
 		} catch (SQLException e) {
@@ -96,7 +96,7 @@ public class ProductDAOImpl implements ProductDAO {
 			ResultSet rs = priceSort.executeQuery();
 			rs.next();
 			Product product = new Product(rs.getInt("ID"), rs.getString("name"), rs.getString("cat"),
-					rs.getDate("manufacture_date"), rs.getDate("exp_date"), rs.getDouble("price"));
+					rs.getDate("manufacture_date").toInstant(), rs.getDate("exp_date").toInstant(), rs.getDouble("price"));
 			System.out.println("The cheapest product is " + product);
 
 		} catch (SQLException e) {
@@ -113,7 +113,7 @@ public class ProductDAOImpl implements ProductDAO {
 			ResultSet rs = readerCat.executeQuery();
 			while (rs.next()) {
 				Product product = new Product(rs.getInt("ID"), rs.getString("name"), rs.getString("cat"),
-						rs.getDate("manufacture_date"), rs.getDate("exp_date"), rs.getDouble("price"));
+						rs.getDate("manufacture_date").toInstant(), rs.getDate("exp_date").toInstant(), rs.getDouble("price"));
 				System.out.println(product);
 			}
 		} catch (SQLException e) {
@@ -129,8 +129,8 @@ public class ProductDAOImpl implements ProductDAO {
 			readerID.setInt(1, ID);
 			ResultSet rs = readerID.executeQuery();
 			while (rs.next()) {
-				Product product = new Product(rs.getString("name"), rs.getString("cat"), rs.getDate("manufacture_date"),
-						rs.getDate("exp_date"), rs.getDouble("price"));
+				Product product = new Product(rs.getString("name"), rs.getString("cat"), rs.getDate("manufacture_date").toInstant(),
+						rs.getDate("exp_date").toInstant(), rs.getDouble("price"));
 				System.out.println(product);
 			}
 		} catch (SQLException e) {
@@ -146,8 +146,8 @@ public class ProductDAOImpl implements ProductDAO {
 			readerID.setInt(1, ID);
 			ResultSet rs = readerID.executeQuery();
 			if (rs.next()) {
-				Product product = new Product(rs.getInt("ID"), rs.getString("name"), rs.getString("cat"), rs.getDate("manufacture_date"),
-						rs.getDate("exp_date"), rs.getDouble("price"));
+				Product product = new Product(rs.getInt("ID"), rs.getString("name"), rs.getString("cat"), rs.getDate("manufacture_date").toInstant(),
+						rs.getDate("exp_date").toInstant(), rs.getDouble("price"));
 				System.out.println(product);
 				System.out.println("Enter the product name: ");
 				String name = scDAO.nextLine();
@@ -173,7 +173,7 @@ public class ProductDAOImpl implements ProductDAO {
 				if (manufacture_date != null) {
 					updater.setDate(3, manufacture_date);
 				} else {
-					updater.setDate(3, product.getManufacture_date());
+					updater.setDate(3, product.getManufacture_date().to);
 				}
 				if (exp_date != null) {
 					updater.setDate(4, exp_date);

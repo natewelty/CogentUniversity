@@ -19,6 +19,7 @@ public class Person {
 		ID = iD;
 		this.name = name;
 		this.age = age;
+//		System.out.println("This person is " + this.toString());
 	}
 
 	public void showPerson() {

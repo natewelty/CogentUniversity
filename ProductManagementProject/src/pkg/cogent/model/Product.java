@@ -1,14 +1,14 @@
 package pkg.cogent.model;
 
-import java.sql.Date;
+import java.time.Instant;
 
 public class Product {
 	private int ID;
 	private String name, cat;
-	private Date manufacture_date, exp_date;
+	private Instant manufacture_date, exp_date;
 	private double price;
 
-	public Product(String name, String cat, Date manufacture_date, Date exp_date, double price) {
+	public Product(String name, String cat, Instant manufacture_date, Instant exp_date, double price) {
 		super();
 		this.name = name;
 		this.cat = cat;
@@ -17,7 +17,7 @@ public class Product {
 		this.price = price;
 	}
 
-	public Product(int ID, String name, String cat, Date manufacture_date, Date exp_date, double price) {
+	public Product(int ID, String name, String cat, Instant manufacture_date, Instant exp_date, double price) {
 		super();
 		this.ID = ID;
 		this.name = name;
@@ -57,19 +57,19 @@ public class Product {
 		this.cat = cat;
 	}
 
-	public Date getManufacture_date() {
+	public Instant getManufacture_date() {
 		return manufacture_date;
 	}
 
-	public void setManufacture_date(Date manufacture_date) {
+	public void setManufacture_date(Instant manufacture_date) {
 		this.manufacture_date = manufacture_date;
 	}
 
-	public Date getExp_date() {
+	public Instant getExp_date() {
 		return exp_date;
 	}
 
-	public void setExp_date(Date exp_date) {
+	public void setExp_date(Instant exp_date) {
 		this.exp_date = exp_date;
 	}
 

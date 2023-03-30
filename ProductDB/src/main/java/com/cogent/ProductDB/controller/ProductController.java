@@ -16,10 +16,11 @@ public class ProductController {
 	private ProductService productService;
 	@GetMapping("/products")
 	public List<Product> fetchProductList(){
+		
 		return productService.fetchProductList();
 	}
 	@PostMapping("/products")
-	public Product saveEmployee(@RequestBody Product product) {
+	public Product saveProduct(@RequestBody Product product) {
 		return productService.saveProduct(product);
 	}
 	

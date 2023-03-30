@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -46,6 +47,6 @@ public class SecuritySandboxApplication {
 		SpringApplication.run(SecuritySandboxApplication.class, args);
 //		UserDetailsService users = ctx.getBean(UserDetailsService.class);
 //		users.setAuthenticationManager(ctx.getBean(AuthenticationManager.class))
-	  b }
+	   }
 
 }

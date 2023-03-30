@@ -23,4 +23,10 @@ public class ProductServiceImpl implements ProductService {
 		return (List<Product>) productRepository.findAll();
 	}
 
+	@Override
+	public Product updateProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
